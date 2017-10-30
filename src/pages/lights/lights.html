@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Luzes</ion-title>
+    <button ion-button color='primary' menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-buttons end>
+    <button ion-button color='primary' icon-only round>
+      <ion-icon name='bulb'></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-list>
+    <ion-item>
+      <ion-label>Luz 1</ion-label>
+      <ion-toggle [(ngModel)]='luz1'></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Luz 2</ion-label>
+      <ion-toggle [(ngModel)]='luz2'></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Luz 3</ion-label>
+      <ion-toggle [(ngModel)]='luz3'></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

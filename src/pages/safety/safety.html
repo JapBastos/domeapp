@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Segurança</ion-title>
+    <button ion-button color='primary' menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-buttons end>
+    <button ion-button color='primary' icon-only round>
+      <ion-icon name='lock'></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-list>
+    <ion-item>
+      <ion-label>Alarme 1</ion-label>
+      <ion-toggle [(ngModel)]='war1'></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alarme 2</ion-label>
+      <ion-toggle [(ngModel)]='war2'></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
