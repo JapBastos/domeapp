@@ -1,25 +1,33 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NodesProvider } from '../../providers/nodes/nodes';
 
-/**
- * Generated class for the ClimatePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
   selector: 'page-climate',
   templateUrl: 'climate.html',
+  providers: [ NodesProvider ]
 })
 export class ClimatePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  public lista_nodes = new Array<any>();
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private nodeProvider: NodesProvider
+  ) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ClimatePage');
+    this.nodeProvider.getNodes().subscribe(
+      data => {
+        const response = (data as any);
+        const objeto_retorno = JSON.parse(response._body);
+        this.lista_nodes = objeto_retorno.results;
+        console.log(objeto_retorno);},
+      error => {console.log(error);}
+    )
   }
-
 }

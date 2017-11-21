@@ -8,6 +8,7 @@ import { EletroPage } from '../pages/eletro/eletro';
 import { ClimatePage } from '../pages/climate/climate';
 import { LightsPage } from '../pages/lights/lights';
 import { SafetyPage } from '../pages/safety/safety';
+import { ConfigPage } from '../pages/config/config';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,8 @@ export class MyApp {
       {title: 'Luzes', component: LightsPage},
       {title: 'Eletros', component: EletroPage},
       {title: 'Temperatura', component: ClimatePage},
-      {title: 'Segurança', component: SafetyPage}
+      {title: 'Segurança', component: SafetyPage},
+      {title: 'Configurações', component: ConfigPage}
     ]
 
     platform.ready().then(() => {
